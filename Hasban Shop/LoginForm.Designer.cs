@@ -34,38 +34,42 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(272, 74);
+            this.label1.Location = new System.Drawing.Point(60, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 15);
+            this.label1.Size = new System.Drawing.Size(100, 15);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Username";
+            this.label1.Text = "Username / Email";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(272, 98);
+            this.textBox1.Location = new System.Drawing.Point(60, 72);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(112, 23);
+            this.textBox1.Size = new System.Drawing.Size(164, 23);
             this.textBox1.TabIndex = 1;
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(277, 191);
+            this.checkBox1.Location = new System.Drawing.Point(61, 165);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(107, 19);
             this.checkBox1.TabIndex = 2;
             this.checkBox1.Text = "show password";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(272, 144);
+            this.label2.Location = new System.Drawing.Point(60, 118);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 15);
             this.label2.TabIndex = 3;
@@ -73,14 +77,15 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(272, 162);
+            this.textBox2.Location = new System.Drawing.Point(60, 136);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(112, 23);
+            this.textBox2.Size = new System.Drawing.Size(164, 23);
             this.textBox2.TabIndex = 4;
+            this.textBox2.UseSystemPasswordChar = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(309, 216);
+            this.button1.Location = new System.Drawing.Point(61, 190);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 5;
@@ -88,11 +93,46 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(54, 245);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(115, 15);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Don\'t have account?";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(175, 245);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(46, 15);
+            this.linkLabel1.TabIndex = 7;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "register";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(10, 9);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(82, 15);
+            this.linkLabel2.TabIndex = 8;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "back to Home";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(282, 316);
+            this.Controls.Add(this.linkLabel2);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
@@ -100,7 +140,8 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "LoginForm";
-            this.Text = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Hasban | Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,5 +155,8 @@
         private Label label2;
         private TextBox textBox2;
         private Button button1;
+        private Label label3;
+        private LinkLabel linkLabel1;
+        private LinkLabel linkLabel2;
     }
 }
