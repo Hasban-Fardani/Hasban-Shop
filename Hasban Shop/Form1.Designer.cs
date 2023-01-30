@@ -288,5 +288,6 @@ namespace Hasban_Shop
         private ToolStripMenuItem kuisToolStripMenuItem;
         private ToolStripMenuItem dashboardToolStripMenuItem1;
         private ToolStripMenuItem kuisToolStripMenuItem1;
+        private RichTextBox richTextBox1;
     }
 }
