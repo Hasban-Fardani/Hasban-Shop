@@ -19,3 +19,4 @@ sisi server
 - visual studio code
 - vercel.com (serveler function)
 
+note : pastikan anda terkoneksi dengan internet
